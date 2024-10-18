@@ -1,0 +1,35 @@
+import time
+print("selam ben adal")
+time.sleep(0.5)
+liste = {
+    "IYI": "mükemmel hadi ",
+    "KOTU":"senin için üzüldüm",
+    "BERBAT": "gününün iyi gecmesi dileğiyle",
+    "MUHTESEM": "çook iyi hadi",
+    "ORTA": "şöyle böyle diyiyorsun",
+    "EHISTE": "ozaman hadi,", 
+}
+nasil = input("nasılsın (birin yaz/IYI/KOTU/ORTA/MUHTESEM/BERBAT/EHISTE)").upper()
+if nasil in liste:
+    print("'{}' {}".format(nasil, liste[nasil]))  # Anlamı yazdırıyoruz
+else:
+    print("bunu anlıyamadım da neyse")  # Eğer kelime sözlükte yoksa
+time.sleep(1)
+meme_sozluk = {
+    "CRINGE": "Garip ya da utandırıcı bir şey",
+    "LOL": "Komik bir şeye verilen cevap",
+    "ROFL": "Bir şakaya karşılık verilen cevap",
+    "SHEESH": "Onaylamamak",
+    "CREEPY": "Korkunç",
+    "AGGRO": "Agresifleşmek/sinirlenmek",
+}
+anahtar = True
+while anahtar:
+    kelime = input("Anlamadığın bir kelime yaz(kapatmak için 'dur' yaz) ").upper()
+    if kelime in meme_sozluk:
+        print("'{}' kelimesinin anlamı: {}".format(kelime, meme_sozluk[kelime]))  # Anlamı yazdırıyoruz
+    elif kelime == "DUR":
+        anahtar = False
+    else:
+        print("Bu kelime sözlükte bulunamadı.")  # Eğer kelime sözlükte yoksa
+    time.sleep(1)
